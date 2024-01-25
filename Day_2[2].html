@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple HTML Template</title>
+</head>
+<body style="background-color: brown;">
+    <h1>Simple HTML Template</h1>
+    <p>
+        This is a basic HTML template with an input field and a button.
+    </p>
+
+    <label for="userInput">Enter something:</label>
+    <input type="text" id="userInput" placeholder="Type here...">
+
+    <button id="submitButton">Submit</button>
+
+    <div id="output"></div>
+
+    <!-- JavaScript code can be added here to handle user interactions -->
+    <script>
+        /*
+        Write a JavaScript function that calculates the factorial of a given number.
+        Use a loop to perform the factorial calculation within the function.
+        When the user enters a number and clicks the button, the function
+        should display the factorial result on the webpage.
+        */
+    function calculateFactorial(){
+        //get user input from the field
+        const userInput = document.getElementById('userInput').value;
+        //convert the string to a number
+        const number = parseInt(userInput);
+        console.log(number);
+        let factorial = 1;
+        let i = 2;
+        while (i <= number){
+            factorial=factorial * i;
+            console.log('oh wow');
+            i++;
+        }
+        const outputDiv = document.getElementById('output');
+        outputDiv.textContent = factorial
+            return factorial; 
+    }
+    const submitButton = document.getElementById('submitButton')
+    submitButton.addEventListener('click',calculateFactorial);
+    </script>
+
+</body>
+</html>

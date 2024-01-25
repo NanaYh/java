@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple HTML Template</title>
+</head>
+<body>
+    <h1>Simple HTML Template</h1>
+    <p>This is a basic HTML template with an input field and a button.</p>
+
+    <label for="userInput">Enter something:</label>
+    <input type="text" id="userInput" placeholder="Type here...">
+
+    <button id="submitButton">Submit</button>
+
+    <div id="outputDiv"></div>
+
+<!-- JavaScript code can be added here to handle user interactions -->
+<script>
+    const userInputField = document.getElementById("userInput");
+    const submitButton = document.getElementById("submitButton");
+    submitButton.addEventListener('click', function(){
+        const userText = userInputField.value; 
+        //alert("What you entered: " + userText)
+        outputDiv.textContent ="What you entered" + userText
+        document.body.style.backgroundColor = userText;
+    });
+</script> 
+</body>
+</html>
